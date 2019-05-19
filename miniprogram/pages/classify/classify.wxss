@@ -1,0 +1,48 @@
+.page-container{
+  background-color: #f5f5f5;
+  padding: 30rpx;
+}
+
+.classify-section{
+  margin-bottom: 30rpx;
+  padding: 10rpx;
+}
+
+.classify-title{
+  font-size: 18px;
+  color: #333;
+  line-height: 40px;
+}
+
+.classify-desc{
+  font-size: 12px;
+  color: #666;
+  line-height: 24px;
+}
+
+.word-item{
+  position: relative;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15rpx 30rpx;
+}
+
+.word-name{
+  font-size: 16px;
+  color: #333;
+  line-height: 2;
+}
+
+.word-pronunciation{
+  font-size: 12px;
+  color: #999;
+  line-height: 2;
+}
+
+.word-collect{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+}

@@ -1,0 +1,40 @@
+<my-loading is-show="{{!pageShow}}"></my-loading>
+<view class="page-container" wx:if="{{pageShow}}">
+    <view class="banner-section" style="background-image:url({{indexBg}})">
+        <view class="banner-title">技能单词速记</view>
+    </view>
+    <view class="my-section">
+        <view class="my-userInfo" wx:if="{{userInfo.nickName}}">
+            <view class="user-tab">我的单词</view>
+            <navigator class="user-my" hover-class="user-my-hover" url="/pages/collect/collect">
+                <image class="user-avatar" src="{{userInfo.avatarUrl}}"></image>
+                <text class="user-name">{{userInfo.nickName}}</text>
+                <text class="user-to_my">个人收藏</text>
+            </navigator>
+        </view>
+        <view class="my-userInfo" wx:if="{{!userInfo.nickName}}">
+            <button class="login-btn" hover-class="login-btn-hover" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+        </view>
+    </view>
+
+    <view class="stack-list-section" wx:if="{{stacks.length}}">
+        <view class="stack-title">热门技能</view>
+        <view class="stack-content">
+            <navigator 
+                url="/pages/classify/classify?id={{stack.id}}"
+                class="stack-item" 
+                hover-class="stack-item-hover" 
+                wx:for="{{stacks}}" 
+                wx:key="unique"
+                wx:for-index="idx" 
+                wx:for-item="stack"
+                data-status="{{stack.status}}">
+                <view class="item-img_bg">
+                    <image class="item-img" src="{{stack.image}}"></image>
+                </view>
+                <view class="item-title">{{stack.name}}</view>
+                <view class="item-tag" wx:if="{{stack.status_name}}">{{stack.status_name}}</view>
+            </navigator>
+        </view>
+    </view>
+</view>

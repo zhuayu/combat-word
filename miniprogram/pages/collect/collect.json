@@ -1,0 +1,6 @@
+{
+  "onReachBottomDistance": 100,
+  "usingComponents": {
+    "my-loading": "/components/loading/loading"
+  }
+}

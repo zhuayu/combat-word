@@ -1,0 +1,35 @@
+.page-container{
+  background-color: #fff;
+}
+
+.word-content-top{
+  background-color: #f1f1f1;
+  padding: 30px;
+  color: #666;
+}
+
+.word-content-bottom{
+  padding: 30px;
+}
+
+.word-name{
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.word-pronunciation{
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.word-display{
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.word-description{
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+}

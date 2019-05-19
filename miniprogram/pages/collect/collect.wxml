@@ -1,0 +1,19 @@
+<view class="page-container">
+  <view class="word-list">
+    <navigator 
+      url="/pages/word/word?id={{word.id}}" 
+      class="word-item" 
+      wx:for="{{words}}" 
+      wx:for-index="idx" 
+      wx:for-item="word" 
+      wx:key="word.id">
+      <view class="word-name">{{word.name}}</view>
+      <view class="word-pronunciation">音标：{{word.pronunciation}}</view>
+      <view class="word-collect" 
+        catchtap="handleCollect" 
+        data-id="{{word.id}}"
+        data-index="{{idx}}"
+        >取消收藏</view>
+    </navigator>
+  </view>
+</view>
